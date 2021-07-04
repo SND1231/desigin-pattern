@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  post:
+    tty: true
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    working_dir: /go/src/github.com/SND1231/design-pattern
+    ports:
+      - "9002:9002"
+    volumes:
+      - ./src:/go/src/github.com/SND1231/design-pattern
